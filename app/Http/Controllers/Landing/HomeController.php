@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Landing;
 
 use App\Http\Controllers\Controller;
+use App\Models\Package;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -14,7 +15,8 @@ class HomeController extends Controller
      * @Desc:  Load landing/home view
      */
     public function index(Request $request) : View {
-        return view("landing.home");
+        $packages = Package::all();
+        return view("landing.home", compact("packages"));
     }
 
     /** 
@@ -41,7 +43,8 @@ class HomeController extends Controller
      * @Desc:  Load landing/product view
      */
     public function products() : View {
-        return view("landing.product");
+        $packages = Package::all();
+        return view("landing.product", compact("packages"));
     }
 
     /** 

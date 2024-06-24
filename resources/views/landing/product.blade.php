@@ -10,6 +10,6 @@
 
 
     <!-- Product Start -->
-    <x-products />
+    <x-products :products="$packages" />
     <!-- Product End -->
 </x-landing-layout>
