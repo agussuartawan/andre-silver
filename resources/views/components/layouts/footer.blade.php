@@ -4,8 +4,8 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">{{ __('Workshop Address') }}</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+6281918030322</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>andresilverclass@gmail.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
                             class="fab fa-instagram"></i></a>
@@ -19,35 +19,56 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Quick Links</h4>
-                <a class="btn btn-link" href="">About Us</a>
-                <a class="btn btn-link" href="">Contact Us</a>
-                <a class="btn btn-link" href="">Our Services</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">Support</a>
+                <a class="btn btn-link" href="/about">About Us</a>
+                <a class="btn btn-link" href="/services">Our Services</a>
             </div>
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Photo Gallery</h4>
-                <div class="row g-2">
-                    <div class="col-4">
-                        <img class="img-fluid bg-light rounded p-1" src="img/sample (1).jpg" alt="Image">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light rounded p-1" src="img/sample (2).jpg" alt="Image">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light rounded p-1" src="img/sample (3).jpg" alt="Image">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light rounded p-1" src="img/sample (2).jpg" alt="Image">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light rounded p-1" src="img/sample (3).jpg" alt="Image">
-                    </div>
-                    <div class="col-4">
-                        <img class="img-fluid bg-light rounded p-1" src="img/sample (1).jpg" alt="Image">
-                    </div>
+                <div class="row g-2" id="galery">
                 </div>
+                <div class="spinner-border" role="status" id="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <a href="https://drive.google.com/drive/u/1/folders/17hNWes5ZK8ybTN-W1NKT1WqsYaWpAs5V"
+                    target="_blank">View more</a>
             </div>
         </div>
     </div>
 </div>
+
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            // Function to fetch data from API
+            function fetchData() {
+                $.ajax({
+                    url: 'https://script.google.com/macros/s/AKfycbz8-0nYkhrsEO1-6PfECP4lDYFJUbyTZiB0vBuM8Rpe6POGIPSIuhSoG-LxAFn3Dq0l/exec',
+                    method: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        // Loop through the data and append to the container
+                        $.each(data, function(index, image) {
+                            $('#galery').append(
+                                `<div class="col-4">
+                                    <a href="https://drive.google.com/file/d/${image.fileId}/view?usp=drive_link" target="_blank">
+                                        <img class="img-fluid bg-light rounded p-1" src="https://lh3.googleusercontent.com/d/${image.fileId}" alt="${image.fileName}">
+                                    <a/>
+                                </div>`
+                            );
+                        });
+                    },
+                    error: function(error) {
+                        console.error('Error fetching data:', error);
+                    },
+                    complete: function() {
+                        $('#loading').remove();
+                    }
+                });
+            }
+
+            // Call fetchData function to fetch and display data
+            fetchData();
+        });
+    </script>
+@endpush

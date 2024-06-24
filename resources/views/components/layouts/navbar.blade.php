@@ -11,7 +11,7 @@
             <a href="/about" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">About</a>
             <a href="/services" class="nav-item nav-link {{ request()->is('services') ? 'active' : '' }}">Services</a>
             <a href="/products" class="nav-item nav-link {{ request()->is('products') ? 'active' : '' }}">Products</a>
-            <a href="/teams" class="nav-item nav-link {{ request()->is('teams') ? 'active' : '' }}">Our Teams</a>
+            <a href="/teams" class="nav-item nav-link {{ request()->is('teams') ? 'active' : '' }}">Teams</a>
             {{-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu m-0">
@@ -20,6 +20,7 @@
                 </div>
             </div> --}}
             <a href="#contact" class="nav-item nav-link">Contact</a>
+            <a href="#contact" class="nav-item nav-link">Galery</a>
         </div>
         <div class=" d-none d-lg-flex">
             <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
@@ -27,7 +28,7 @@
             </div>
             <div class="ps-3">
                 <small class="text-primary mb-0">Call Us</small>
-                <p class="text-light fs-5 mb-0">+012 345 6789</p>
+                <p class="text-light fs-5 mb-0">+6281918030322</p>
             </div>
         </div>
     </div>
