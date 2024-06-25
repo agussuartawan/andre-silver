@@ -87,6 +87,39 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#subscribe').on('submit', function(e) {
+                e.preventDefault();
+                // Validasi sederhana
+                var email = $('#email').val();
+                if (email === "") {
+                    $("#message").append(
+                        "<span class='text-danger float-start'>Email is required</span>");
+                    return false;
+                }
+
+                // Jika validasi sukses, submit form secara manual
+                $.ajax({
+                    type: 'POST',
+                    url: '/subscribe',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $("#message").empty();
+                        $("#message").append(
+                            "<span class='float-start text-success'>Thank you for subscribing</span>"
+                        );
+                    },
+                    error: function(xhr, status, error) {
+                        $("#message").empty();
+                        $("#message").append(
+                            "<span class='float-start text-danger'>Email already subscribed</span>"
+                        );
+                    }
+                });
+            });
+        })
+    </script>
     @stack('scripts')
 </body>
 

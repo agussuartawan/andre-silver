@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Landing\HomeController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Route;
 
 // PUBLIC ROUTE
@@ -12,6 +13,7 @@ Route::get('/about', [HomeController::class,'about'])->name('about');
 Route::get('/services', [HomeController::class,'services'])->name('services');
 Route::get('/products', [HomeController::class,'products'])->name('products');
 Route::get('/teams', [HomeController::class,'teams'])->name('teams');
+Route::post("/subscribe", [SubscriberController::class, 'store'])->name('subscribe.store');
 
 // DASHBOARD ROUTE
 Route::middleware(['auth', 'verified'])->group(function () {
