@@ -35,7 +35,7 @@
                             <img class="img-fluid" src="{{ asset('storage/images/' . $product->image_url) }}"
                                 alt="">
                             @php
-                                $whatsapp = '6281918030322';
+                                $whatsapp = '6287726674945';
                                 $message =
                                     "Hi Andre Silver Class, I'm interested in booking your class, here are my personal details: %0a";
                                 $message .= 'Name: %0a';
