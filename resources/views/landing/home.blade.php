@@ -29,7 +29,7 @@
 
 
     <!-- Team Start -->
-    <x-teams />
+    {{-- <x-teams /> --}}
     <!-- Team End -->
 
 
