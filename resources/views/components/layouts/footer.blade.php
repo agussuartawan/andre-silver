@@ -3,9 +3,13 @@
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
                 <h4 class="mb-4 text-light">{{ __('Workshop Address') }}</h4>
-                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i></p>
-                <p class="mb-2"><i class="fa fa-envelope me-3"></i>andresilverclass@gmail.com</p>
+                <p class="mb-2">
+                    <a target="_blank" href="{{ config('credentials.addressLink') }}">
+                        <i class="fa fa-map-marker-alt me-3"></i>{{ config('credentials.address') }}
+                    </a>
+                </p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>{{ config('credentials.phone') }}</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>{{ config('credentials.email') }}</p>
                 <div class="pt-2 d-flex">
                     <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
                             class="fab fa-instagram"></i></a>
@@ -13,8 +17,8 @@
                             class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
                             class="fab fa-youtube"></i></a>
-                    <a class="btn btn-square btn-outline-light rounded-circle me-0" href=""><i
-                            class="fab fa-whatsapp"></i></a>
+                    <a target="_blank" class="btn btn-square btn-outline-light rounded-circle me-0"
+                        href="https://wa.me/{{ config('credentials.phone') }}"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">

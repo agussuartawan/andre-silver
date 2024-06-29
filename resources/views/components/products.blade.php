@@ -10,7 +10,7 @@
                         <i class="flex-shrink-0 fa fa-phone-alt fa-4x"></i>
                         <div class="ms-4">
                             <p class="mb-0 fs-5 fw-bold">Call Us</p>
-                            <p class="mb-0 fs-1 fw-bold">+6281918030322</p>
+                            <p class="mb-0 fs-1 fw-bold">{{ config('credentials.phone') }}</p>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="overflow-hidden bg-white rounded product-item d-flex flex-column h-100">
                         <div class="p-4 text-center">
                             <div class="px-3 mb-3 border d-inline-block border-primary rounded-pill">IDR
-                                {{ currency($product->min_price) }} - IDR {{ currency($product->max_price) }}
+                                {{ currency($product->min_price) }}
                             </div>
                             <h3 class="mb-3">{{ $product->name }}</h3>
                             <span>{{ $product->description }}</span>
@@ -35,7 +35,7 @@
                             <img class="img-fluid" src="{{ asset('storage/images/' . $product->image_url) }}"
                                 alt="">
                             @php
-                                $whatsapp = '6287726674945';
+                                $whatsapp = config('credentials.phone');
                                 $message =
                                     "Hi Andre Silver Class, I'm interested in booking your class, here are my personal details: %0a";
                                 $message .= 'Name: %0a';

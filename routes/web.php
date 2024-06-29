@@ -19,8 +19,13 @@ Route::post("/subscribe", [SubscriberController::class, 'store'])->name('subscri
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, "index"])->name('dashboard');
 
+    Route::get('/package/create', [PackageController::class, 'create'])->name('package.create');
+    Route::post('/package/create', [PackageController::class, 'store'])->name('package.store');
+
     Route::get('/package/{package}', [PackageController::class, 'edit'])->name('package.edit');
     Route::patch('/package/{package}', [PackageController::class, 'update'])->name('package.update');
+
+    Route::delete('/package/{package}', [PackageController::class, 'delete'])->name('package.delete');
 
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
