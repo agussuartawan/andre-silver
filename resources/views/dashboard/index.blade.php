@@ -24,10 +24,10 @@
 
             <h1 class="mb-4 text-4xl">Paket Silver Class</h1>
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3" x-data="{ confirmDelete(event) { if (confirm('Are you sure you want to delete this item?')) { event.target.submit(); } } }">
-                @forelse ($packages as $p)
+                @foreach ($packages as $p)
                     <div class="">
                         <img src="{{ asset('/storage/images/' . $p->image_url) }}"
-                            class="rounded-t-lg object-cover w-full h-60" alt="{{ $p->name }}" />
+                            class="object-cover w-full rounded-t-lg h-60" alt="{{ $p->name }}" />
                         <div class="w-full p-6 bg-white rounded-b-lg shadow">
                             <h2 class="mb-2 text-xl font-bold tracking-tight text-gray-900">{{ $p->name }}</h2>
                             <h3 class="mb-2 text-lg font-bold tracking-tight text-gray-900">IDR
@@ -50,12 +50,10 @@
                             </div>
                         </div>
                     </div>
-                @empty
-                    <p>Tidak ada data.</p>
-                @endforelse
+                @endforeach
                 <a title="Add new package" href="{{ route('package.create') }}">
                     <div
-                        class="hover:bg-slate-50 flex items-center min-h-full justify-center border border-dashed rounded-lg border-gray-700">
+                        class="flex items-center justify-center min-h-full border border-gray-700 border-dashed rounded-lg hover:bg-slate-50">
                         <div class="py-10">
                             <svg class="w-10 h-10 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
