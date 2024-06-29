@@ -15,8 +15,8 @@
                         class="fab fa-facebook-f"></i></a>
                 <a class="btn-lg-square text-primary border-end rounded-0" href=""><i
                         class="fab fa-youtube"></i></a>
-                <a class="btn-lg-square text-primary border-end rounded-0" href=""><i
-                        class="fab fa-whatsapp"></i></a>
+                <a target="_blank" class="btn-lg-square text-primary border-end rounded-0"
+                    href="https://wa.me/{{ config('credentials.phone') }}"><i class="fab fa-whatsapp"></i></a>
                 <a class="btn-lg-square text-primary pe-0" href=""><i class="fab fa-instagram"></i></a>
             </div>
         </div>

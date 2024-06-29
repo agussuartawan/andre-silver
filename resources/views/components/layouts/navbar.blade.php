@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
     <a href="/" class="navbar-brand ms-4 ms-lg-0">
-        <h1 class="text-primary m-0">Andre Silver Class</h1>
+        <h1 class="text-primary m-0">{{ config('app.name') }}</h1>
     </a>
     <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
@@ -28,7 +28,7 @@
             </div>
             <div class="ps-3">
                 <small class="text-primary mb-0">Call Us</small>
-                <p class="text-light fs-5 mb-0">+6281918030322</p>
+                <p class="text-light fs-5 mb-0">{{ config('credentials.phone') }}</p>
             </div>
         </div>
     </div>
