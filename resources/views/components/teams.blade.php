@@ -1,12 +1,12 @@
-<div class="container-xxl py-6">
+<div class="py-6 container-xxl">
     <div class="container">
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="text-primary text-uppercase mb-2">// Our Team</p>
-            <h1 class="display-6 mb-4">We're Super Professional At Our Skills</h1>
+        <div class="mx-auto mb-5 text-center wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <p class="mb-2 text-primary text-uppercase">// Our Team</p>
+            <h1 class="mb-4 display-6">We're Super Professional At Our Skills</h1>
         </div>
-        <div class="row g-4">
+        {{-- <div class="row g-4">
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item text-center rounded overflow-hidden">
+                <div class="overflow-hidden text-center rounded team-item">
                     <img class="img-fluid" src="img/team-1.jpg" alt="">
                     <div class="team-text">
                         <div class="team-title">
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item text-center rounded overflow-hidden">
+                <div class="overflow-hidden text-center rounded team-item">
                     <img class="img-fluid" src="img/team-2.jpg" alt="">
                     <div class="team-text">
                         <div class="team-title">
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item text-center rounded overflow-hidden">
+                <div class="overflow-hidden text-center rounded team-item">
                     <img class="img-fluid" src="img/team-3.jpg" alt="">
                     <div class="team-text">
                         <div class="team-title">
@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="team-item text-center rounded overflow-hidden">
+                <div class="overflow-hidden text-center rounded team-item">
                     <img class="img-fluid" src="img/team-4.jpg" alt="">
                     <div class="team-text">
                         <div class="team-title">
@@ -81,6 +81,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
