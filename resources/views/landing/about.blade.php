@@ -13,7 +13,7 @@
     <!-- About End -->
 
     <!-- Team Start -->
-    <x-teams />
+    {{-- <x-teams /> --}}
     <!-- Team End -->
 
 </x-landing-layout>

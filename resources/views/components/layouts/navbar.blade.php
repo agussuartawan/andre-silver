@@ -11,7 +11,7 @@
             <a href="/about" class="nav-item nav-link {{ request()->is('about') ? 'active' : '' }}">About</a>
             <a href="/services" class="nav-item nav-link {{ request()->is('services') ? 'active' : '' }}">Services</a>
             <a href="/products" class="nav-item nav-link {{ request()->is('products') ? 'active' : '' }}">Products</a>
-            <a href="/teams" class="nav-item nav-link {{ request()->is('teams') ? 'active' : '' }}">Teams</a>
+            {{-- <a href="/teams" class="nav-item nav-link {{ request()->is('teams') ? 'active' : '' }}">Teams</a> --}}
             {{-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu m-0">
